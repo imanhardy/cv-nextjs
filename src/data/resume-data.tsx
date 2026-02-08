@@ -1,61 +1,63 @@
 import type { ResumeData } from "@/lib/types";
 
 export const RESUME_DATA: ResumeData = {
-  name: "Bartosz Jarocki",
-  initials: "BJ",
-  location: "Wrocław, Poland, CET",
-  locationLink: "https://www.google.com/maps/place/Wrocław",
-  about: "Full Stack Engineer dedicated to building high-quality products.",
+  name: "Sulaiman Bin Suradi",
+  initials: "SBS",
+  location: "Singapore, GMT +8",
+  locationLink: "https://www.google.com/maps/place/Singapore",
+  about: "Tech-enabled, data-centred product manager/marketer.",
   summary: (
     <>
-      Full Stack Engineer specializing in high-performance React applications,
-      scalable Node.js services, and real-time collaboration systems.
-      Experienced in technical architecture design and remote team leadership.
+      Versatile professional with over 11 years of experience bridging public sector operations, stakeholder management, and digital solutions. 
+      Successfully transitioned from a strong background in Marketing & Communications (RMIT) to technical operations following rigorous upskilling in Infocomm Technology (Temasek Polytechnic). 
+      Currently leveraging this unique hybrid skillset at MUIS to drive process improvements, 
+      system integrations, and data-backed decision-making. Proven ability to translate complex technical requirements for business stakeholders.
     </>
   ),
   avatarUrl: "https://avatars.githubusercontent.com/u/1017620?v=4",
-  personalWebsiteUrl: "https://jarocki.me",
+  personalWebsiteUrl: "https://sulaiman.blog",
   contact: {
-    email: "bartosz.jarocki@hey.com",
-    tel: "+48530213401",
+    email: "sulaimanbins@gmail.com",
+    tel: "+65",
     social: [
       {
         name: "GitHub",
-        url: "https://github.com/BartoszJarocki",
+        url: "https://github.com/imanhardy",
         icon: "github",
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/bjarocki/",
+        url: "https://www.linkedin.com/in/sulaimanbs/",
         icon: "linkedin",
       },
       {
         name: "X",
-        url: "https://x.com/BartoszJarocki",
+        url: "https://x.com/",
         icon: "x",
       },
     ],
   },
   education: [
     {
-      school: "Wrocław University of Technology",
-      degree: "Bachelor's Degree in Control systems engineering and Robotics",
-      start: "2007",
-      end: "2010",
+      school: "RMIT University",
+      degree: "Bachelor of Communication",
+      start: "2015",
+      end: "2016",
     },
   ],
   work: [
     {
-      company: "Motion",
-      link: "https://motionapp.com/",
+      company: "Majlis Ugama Islam Singapura (MUIS)",
+      link: "https://www.muis.gov.sg/",
       badges: ["Remote", "AI", "React", "Next.js", "TypeScript", "AdonisJS"],
-      title: "Senior Software Engineer",
-      start: "2025",
+      title: "Senior Executive",
+      start: "2023",
       end: null,
       description: (
         <>
-          Working on internal AI agents platform allowing marketing specialists
-          to create AI workflows.
+          Lead the end-to-end product lifecycle for the Zakat and Wakaf CRM ecosystem. 
+          Oversee technical integrations for omnichannel payment systems (Online, Counter, Self-Service Kiosks).
+          Manage vendor relationships to ensure high system uptime and security
         </>
       ),
     },
@@ -181,7 +183,7 @@ export const RESUME_DATA: ResumeData = {
     },
   ],
   skills: [
-    "React/Next.js/Remix",
+    "Microsoft Power BI",
     "TypeScript",
     "Tailwind CSS",
     "Design Systems",
@@ -195,7 +197,7 @@ export const RESUME_DATA: ResumeData = {
   ],
   projects: [
     {
-      title: "Monito",
+      title: "Islamic Legacy Planning",
       techStack: ["TypeScript", "Next.js", "Browser Extension", "PostgreSQL"],
       description:
         "Browser extension for debugging web applications. Includes taking screenshots, screen recording, E2E tests generation and generating bug reports",
@@ -205,7 +207,7 @@ export const RESUME_DATA: ResumeData = {
       },
     },
     {
-      title: "Consultly",
+      title: "Zakat.sg",
       techStack: [
         "TypeScript",
         "Next.js",
