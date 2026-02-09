@@ -14,7 +14,7 @@ export const RESUME_DATA: ResumeData = {
       system integrations, and data-backed decision-making. Proven ability to translate complex technical requirements for business stakeholders.
     </>
   ),
-  avatarUrl: "https://avatars.githubusercontent.com/u/1017620?v=4",
+  avatarUrl: "https://discord.com/channels/696188649032646776/1134386366361391124/1470288336311685302",
   personalWebsiteUrl: "https://sulaiman.blog",
   contact: {
     email: "sulaimanbins@gmail.com",
