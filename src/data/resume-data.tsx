@@ -62,10 +62,10 @@ export const RESUME_DATA: ResumeData = {
       ),
     },
     {
-      company: "Film.io",
+      company: "OneSecure Asia",
       link: "https://film.io",
       badges: ["Remote", "React", "Next.js", "TypeScript", "Node.js"],
-      title: "Software Architect",
+      title: "Marketing Manager",
       start: "2024",
       end: "2025",
       description: (
@@ -89,7 +89,7 @@ export const RESUME_DATA: ResumeData = {
       ),
     },
     {
-      company: "Parabol",
+      company: "Footballco",
       link: "https://parabol.co",
       badges: [
         "Remote",
