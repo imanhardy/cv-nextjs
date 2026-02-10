@@ -14,7 +14,7 @@ export const RESUME_DATA: ResumeData = {
       system integrations, and data-backed decision-making. Proven ability to translate complex technical requirements for business stakeholders.
     </>
   ),
-  avatarUrl: "/sulaiman-suradi-profile.jpg",
+  avatarUrl: "https://file.go.gov.sg/sulaiman-bin-suradi.jpg",
   personalWebsiteUrl: "https://sulaiman.blog",
   contact: {
     email: "sulaimanbins@gmail.com",
