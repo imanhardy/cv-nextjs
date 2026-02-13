@@ -85,11 +85,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.className}>
       <head>
         {/* Google tag (gtag.js) */}
         <Script
-          async
           src="https://www.googletagmanager.com/gtag/js?id=G-2M9KJDFPGH"
           strategy="afterInteractive"
         />
@@ -103,22 +102,10 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={inter.className}>{children}</body>
-    </html>
-  );
-}
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="en" className={inter.className}>
       <body>
         <ErrorBoundary>{children}</ErrorBoundary>
+        <Analytics />
       </body>
-      <Analytics />
     </html>
   );
 }
