@@ -1,8 +1,5 @@
-![cv](https://github.com/BartoszJarocki/cv/assets/1017620/79bdb9fc-0b20-4d2c-aafe-0526ad4a71d2)
-
 # Minimalist CV
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FBartoszJarocki%2Fcv)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
@@ -41,33 +38,6 @@ A clean and modern web app that renders a minimalist CV/Resume with a print-frie
 
 - Node.js 18+ 
 - pnpm 8+
-
-### Installation
-
-1. **Clone the repository**
-
-   ```bash
-   git clone https://github.com/BartoszJarocki/cv.git
-   cd cv
-   ```
-
-2. **Install dependencies**
-
-   ```bash
-   pnpm install
-   ```
-
-3. **Start the development server**
-
-   ```bash
-   pnpm dev
-   ```
-
-4. **Open [http://localhost:3000](http://localhost:3000)** in your browser
-
-5. **Customize your CV**
-   
-   Edit the [src/data/resume-data.tsx](./src/data/resume-data.tsx) file to add your personal information, work experience, education, and skills.
 
 ### Available Scripts
 
@@ -179,9 +149,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [shadcn/ui](https://ui.shadcn.com/) for the beautiful UI components
 - [Vercel](https://vercel.com/) for hosting and deployment
 - All contributors who have helped improve this project
-
----
-
-<p align="center">
-  Made with ❤️ by <a href="https://github.com/BartoszJarocki">Bartosz Jarocki</a>
-</p>
