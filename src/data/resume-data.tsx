@@ -8,9 +8,15 @@ export const RESUME_DATA: ResumeData = {
   about: "Tech-Enabled Operations Professional bridging Policy & Digital Solutions.",
   summary: (
     <>
-      Versatile professional with over 11 years of experience bridging public sector operations, stakeholder management, and digital solutions. 
+      Versatile professional with over 11 years of experience bridging public sector operations, stakeholder management, and digital solutions.
+      <br />
+      <br />
       Successfully transitioned from a strong background in Marketing & Communications to technical operations following rigorous upskilling in Infocomm Technology. 
+      <br />
+      <br />
       Currently leveraging this unique hybrid skillset at MUIS to drive process improvements, system integrations, and data-backed decision-making. 
+      <br />
+      <br />
       Proven ability to translate complex technical requirements for business stakeholders.
     </>
   ),
