@@ -1,4 +1,4 @@
-import { Script } from "next/script";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
