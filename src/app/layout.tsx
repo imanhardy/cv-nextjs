@@ -1,3 +1,4 @@
+import { Script } from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
@@ -61,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${RESUME_DATA.name} - ${RESUME_DATA.about}`,
     description: RESUME_DATA.about,
-    creator: "@BartoszJarocki",
+    creator: "@sulaimanbins",
   },
   alternates: {
     canonical: RESUME_DATA.personalWebsiteUrl,
@@ -77,6 +78,35 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 5,
 };
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <head>
+        {/* Google tag (gtag.js) */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-2M9KJDFPGH"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-2M9KJDFPGH');
+          `}
+        </Script>
+      </head>
+      <body className={inter.className}>{children}</body>
+    </html>
+  );
+}
 
 export default function RootLayout({
   children,
