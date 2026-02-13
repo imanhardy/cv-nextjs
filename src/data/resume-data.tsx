@@ -5,13 +5,13 @@ export const RESUME_DATA: ResumeData = {
   initials: "SBS",
   location: "Singapore, GMT +8",
   locationLink: "https://www.google.com/maps/place/Singapore",
-  about: "Tech-enabled, data-centred product manager/marketer.",
+  about: "Tech-Enabled Operations Professional bridging Policy & Digital Solutions.",
   summary: (
     <>
       Versatile professional with over 11 years of experience bridging public sector operations, stakeholder management, and digital solutions. 
-      Successfully transitioned from a strong background in Marketing & Communications (RMIT) to technical operations following rigorous upskilling in Infocomm Technology (Temasek Polytechnic). 
-      Currently leveraging this unique hybrid skillset at MUIS to drive process improvements, 
-      system integrations, and data-backed decision-making. Proven ability to translate complex technical requirements for business stakeholders.
+      Successfully transitioned from a strong background in Marketing & Communications to technical operations following rigorous upskilling in Infocomm Technology. 
+      Currently leveraging this unique hybrid skillset at MUIS to drive process improvements, system integrations, and data-backed decision-making. 
+      Proven ability to translate complex technical requirements for business stakeholders.
     </>
   ),
   avatarUrl: "https://file.go.gov.sg/sulaiman-bin-suradi.jpg",
@@ -21,14 +21,14 @@ export const RESUME_DATA: ResumeData = {
     tel: "+65",
     social: [
       {
-        name: "GitHub",
-        url: "https://github.com/imanhardy",
-        icon: "github",
-      },
-      {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/sulaimanbs/",
         icon: "linkedin",
+      },
+      {
+        name: "GitHub",
+        url: "https://github.com/imanhardy",
+        icon: "github",
       },
       {
         name: "X",
@@ -39,50 +39,65 @@ export const RESUME_DATA: ResumeData = {
   },
   education: [
     {
+      school: "Temasek Polytechnic",
+      degree: "Specialist Diploma in Infocomm & Digital Media",
+      start: "2020",
+      end: "2021",
+    },
+    {
       school: "RMIT University",
-      degree: "Bachelor of Communication",
+      degree: "Bachelor of Communication (Professional Communication)",
       start: "2015",
       end: "2016",
+    },
+    {
+      school: "Ngee Ann Polytechnic",
+      degree: "Diploma in Mass Communication",
+      start: "2008",
+      end: "2011",
     },
   ],
   work: [
     {
       company: "Majlis Ugama Islam Singapura (MUIS)",
       link: "https://www.muis.gov.sg/",
-      badges: ["Remote", "AI", "React", "Next.js", "TypeScript", "AdonisJS"],
-      title: "Senior Executive",
+      badges: ["Public Sector", "Product Mgmt", "CRM", "AI Ops"],
+      title: "Senior Executive, Zakat & Wakaf Strategic Unit",
       start: "2023",
-      end: null,
+      end: "Present",
       description: (
         <>
-          Lead the end-to-end product lifecycle for the Zakat and Wakaf CRM ecosystem. 
-          Oversee technical integrations for omnichannel payment systems (Online, Counter, Self-Service Kiosks).
-          Manage vendor relationships to ensure high system uptime and security
+          Lead the end-to-end product lifecycle for the Zakat and Wakaf CRM ecosystem and digital platforms.
+          <ul className="list-inside list-disc">
+            <li>
+              **Product & Project Management:** Oversee technical integrations for omnichannel payment systems (Online, Counter, Kiosks) and manage vendor relationships for high uptime.
+            </li>
+            <li>
+              **Digital Transformation:** Spearhead AI chatbot initiatives and implemented e-learning SaaS platforms (Articulate 360) to modernize staff training.
+            </li>
+            <li>
+              **Business Intelligence:** Drive data analytics strategy using Power BI/Excel to forecast revenue and support policy formulation (Nisab/Fitrah rates).
+            </li>
+          </ul>
         </>
       ),
     },
     {
       company: "OneSecure Asia",
-      link: "https://film.io",
-      badges: ["Remote", "React", "Next.js", "TypeScript", "Node.js"],
+      link: "https://www.onesecureasia.com/", 
+      badges: ["Contract", "Cybersecurity", "GTM Strategy"],
       title: "Marketing Manager",
-      start: "2024",
-      end: "2025",
+      start: "2022",
+      end: "2022",
       description: (
         <>
-          Leading technical architecture of a blockchain-based film funding
-          platform.
+          Managed go-to-market strategies for cybersecurity solutions.
           <ul className="list-inside list-disc">
             <li>
-              Architecting migration from CRA to Next.js for improved
-              performance, SEO, and DX
+              Translated technical product features into clear value propositions for business clients.
             </li>
             <li>
-              Established release process enabling faster deployments and
-              reliable rollbacks
-            </li>
-            <li>
-              Implementing system-wide monitoring and security improvements
+              Executed B2B marketing initiatives to drive lead generation.
             </li>
           </ul>
         </>
@@ -90,149 +105,133 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       company: "Footballco",
-      link: "https://parabol.co",
-      badges: [
-        "Remote",
-        "React",
-        "TypeScript",
-        "Node.js",
-        "GraphQL",
-        "Tailwind CSS",
-      ],
-      title: "Senior Full Stack Developer",
+      link: "https://www.footballco.com/",
+      badges: ["Account Mgmt", "Analytics", "Global Media"],
+      title: "Account Executive",
       start: "2021",
-      end: "2024",
+      end: "2022",
       description: (
         <>
-          Senior developer and squad leader for an enterprise agile meeting
-          platform.
+          Managed post-sales execution and performance analysis for key accounts.
           <ul className="list-inside list-disc">
             <li>
-              Built design system with Tailwind CSS, improving development speed
-              and time to market
+              **Client Operations:** Managed deliverables to meet strict timelines and quality standards.
             </li>
             <li>
-              Implemented engineering practices: PR automation, code review
-              guidelines, and workflows
-            </li>
-            <li>
-              Open source contributions to Relay DevTools and React i18n tooling
+              **Performance Analysis:** Utilized analytics tools to track campaign metrics and generated data-driven reports for stakeholders.
             </li>
           </ul>
         </>
       ),
     },
     {
-      company: "Clevertech",
-      link: "https://clevertech.biz",
-      badges: ["Remote", "React", "TypeScript", "Node.js", "Android", "Kotlin"],
-      title: "Lead Android Developer → Full Stack Developer",
-      start: "2015",
+      company: "Temasek Polytechnic",
+      link: "https://www.tp.edu.sg/",
+      badges: ["Sabbatical", "Upskilling", "Infocomm"],
+      title: "Full-time Student / Career Sabbatical",
+      start: "2020",
       end: "2021",
       description: (
         <>
-          Successfully transitioned from mobile to full-stack development while
-          leading distributed teams.
+          Undertook a planned one-year sabbatical to acquire technical competencies in Computer & Information Sciences.
           <ul className="list-inside list-disc">
             <li>
-              Led frontend team at Evercast, building real-time platform
-              supporting 30+ users per room with HD streaming and collaboration
-              tools
+              Completed Diploma in Infocomm & Digital Media to pivot career trajectory toward technical operations.
             </li>
             <li>
-              Developed offline-first Android app for DKMS, improving donor
-              registration process
-            </li>
-            <li>
-              Led development teams across multiple successful client projects
+              Focus areas: Cloud Management, Server Admin, and Digital Media tech.
             </li>
           </ul>
         </>
       ),
     },
     {
-      company: "Jojo Mobile",
-      link: "https://bsgroup.eu/",
-      badges: ["On Site", "Android", "Java", "Kotlin"],
-      title: "Android Developer → Lead Android Developer",
-      start: "2012",
-      end: "2015",
+      company: "Ascenda",
+      link: "https://www.ascendaloyalty.com/",
+      badges: ["FinTech", "Partnerships", "Ops"],
+      title: "Senior Marketing & Partnerships Executive",
+      start: "2018",
+      end: "2020",
       description: (
         <>
-          First Android developer, grew and led a team of 15+ engineers while
-          establishing engineering culture.
+          Managed strategic B2B partnerships and operational workflows for loyalty programs.
           <ul className="list-inside list-disc">
             <li>
-              Developed apps for major Polish companies including LOT, Polskie
-              Radio, and Agora
+              **Stakeholder Management:** Managed partnerships with major financial institutions.
             </li>
-            <li>Built and mentored high-performing mobile development team</li>
+            <li>
+              **Operational Workflows:** Oversaw end-to-end rewards redemption workflows and troubleshooting.
+            </li>
           </ul>
         </>
       ),
     },
     {
-      company: "Nokia Siemens Networks",
-      link: "https://www.nokia.com",
-      badges: ["On Site", "C/C++", "LTE", "Agile"],
-      title: "C/C++ Developer",
-      start: "2010",
-      end: "2012",
+      company: "Furama Hotels International",
+      link: "https://www.furama.com/",
+      badges: ["Hospitality", "Campaign Ops"],
+      title: "Marketing Executive",
+      start: "2017",
+      end: "2018",
+      description: (
+        <>
+          Executed integrated marketing campaigns and aligned strategies with revenue goals.
+        </>
+      ),
+    },
+    {
+      company: "BBC Global News",
+      link: "https://www.bbc.com/",
+      badges: ["Media", "Data Integrity", "Inventory"],
+      title: "Pricing & Inventory Assistant",
+      start: "2016",
+      end: "2017",
       description:
-        "Developed software for LTE base stations at enterprise scale, gaining strong fundamentals in software architecture, testing practices, and cross-team collaboration.",
+        "Managed commercial ad inventory data and pricing structures, ensuring 100% accuracy in booking systems and conducting regular audits for revenue optimization.",
     },
   ],
   skills: [
-    "Microsoft Power BI",
-    "TypeScript",
-    "Tailwind CSS",
-    "Design Systems",
-    "WebRTC",
-    "WebSockets",
-    "Node.js",
-    "GraphQL",
-    "Relay",
-    "System Architecture",
-    "Remote Team Leadership",
+    "Product Management",
+    "CRM Ecosystems",
+    "Business Intelligence",
+    "Power BI",
+    "Advanced Excel",
+    "Stakeholder Management",
+    "Digital Transformation",
+    "Policy Formulation",
+    "Generative AI Tools",
+    "Agile/Scrum Principles",
+    "Vendor Management",
   ],
   projects: [
     {
-      title: "Islamic Legacy Planning",
-      techStack: ["TypeScript", "Next.js", "Browser Extension", "PostgreSQL"],
+      title: "Zakat & Wakaf CRM Ecosystem",
+      techStack: ["CRM", "Payment Gateways", "Vendor Mgmt", "Omnichannel"],
       description:
-        "Browser extension for debugging web applications. Includes taking screenshots, screen recording, E2E tests generation and generating bug reports",
+        "Leading the end-to-end lifecycle of the Zakat and Wakaf management system, integrating online, counter, and kiosk payment channels for seamless donor experience.",
       link: {
-        label: "monito.dev",
-        href: "https://monito.dev/",
+        label: "MUIS Zakat",
+        href: "https://www.zakat.sg/",
       },
     },
     {
-      title: "Zakat.sg",
-      techStack: [
-        "TypeScript",
-        "Next.js",
-        "Vite",
-        "GraphQL",
-        "WebRTC",
-        "Tailwind CSS",
-        "PostgreSQL",
-        "Redis",
-      ],
+      title: "Digital Transformation & AI",
+      techStack: ["AI Chatbots", "Articulate 360", "SaaS", "Automation"],
       description:
-        "Platform for online consultations with real-time video meetings and scheduling",
+        "Spearheading the digitalization of internal processes, including the deployment of AI chatbots for query handling and modern e-learning platforms for officer training.",
       link: {
-        label: "consultly.com",
-        href: "https://consultly.com/",
+        label: "MUIS",
+        href: "https://www.muis.gov.sg/",
       },
     },
     {
-      title: "Minimalist CV",
-      techStack: ["TypeScript", "Next.js", "Tailwind CSS"],
+      title: "Policy Data Strategy",
+      techStack: ["Power BI", "Excel", "Data Analytics", "Policy Papers"],
       description:
-        "An open source minimalist, print friendly CV template with a focus on readability and clean design. >9k stars on GitHub",
+        "Formulating critical policy papers (Nisab calculations, Fitrah rates) backed by rigorous data analysis and business intelligence reporting.",
       link: {
-        label: "Minimalist CV",
-        href: "https://github.com/BartoszJarocki/cv",
+        label: "Fatwa/Fiqh",
+        href: "https://www.muis.gov.sg/officeofthemufti",
       },
     },
   ],
