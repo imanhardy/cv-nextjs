@@ -1,25 +1,19 @@
+import { validateResumeData } from "@/lib/schemas";
 import type { ResumeData } from "@/lib/types";
 
-export const RESUME_DATA: ResumeData = {
+export const RESUME_DATA: ResumeData = validateResumeData({
   name: "Sulaiman Bin Suradi",
   initials: "SBS",
   location: "Singapore, GMT +8",
   locationLink: "https://www.google.com/maps/place/Singapore",
   about: "Tech-Enabled Operations Professional bridging Policy & Digital Solutions.",
-  summary: (
-    <>
-      Versatile professional with over 11 years of experience bridging public sector operations, stakeholder management, and digital solutions.
-      <br />
-      <br />
-      Successfully transitioned from a strong background in Marketing & Communications to technical operations following rigorous upskilling in Infocomm Technology. 
-      <br />
-      <br />
-      Currently leveraging this unique hybrid skillset at MUIS to drive process improvements, system integrations, and data-backed decision-making. 
-      <br />
-      <br />
-      Proven ability to translate complex technical requirements for business stakeholders.
-    </>
-  ),
+  summary: `Versatile professional with over 11 years of experience bridging public sector operations, stakeholder management, and digital solutions.
+
+Successfully transitioned from a strong background in Marketing & Communications to technical operations following rigorous upskilling in Infocomm Technology.
+
+Currently leveraging this unique hybrid skillset at MUIS to drive process improvements, system integrations, and data-backed decision-making.
+
+Proven ability to translate complex technical requirements for business stakeholders.`,
   avatarUrl: "https://file.go.gov.sg/sulaiman-bin-suradi.jpg",
   personalWebsiteUrl: "https://sulaiman.blog",
   contact: {
@@ -71,22 +65,11 @@ export const RESUME_DATA: ResumeData = {
       title: "Senior Executive, Zakat & Wakaf Strategic Unit",
       start: "2023",
       end: "Present",
-      description: (
-        <>
-          Lead the end-to-end product lifecycle for the Zakat and Wakaf CRM ecosystem and digital platforms.
-          <ul className="list-inside list-disc">
-            <li>
-              **Product & Project Management:** Oversee technical integrations for omnichannel payment systems (Online, Counter, Kiosks) and manage vendor relationships for high uptime.
-            </li>
-            <li>
-              **Digital Transformation:** Spearhead AI chatbot initiatives and implemented e-learning SaaS platforms (Articulate 360) to modernize staff training.
-            </li>
-            <li>
-              **Business Intelligence:** Drive data analytics strategy using Power BI/Excel to forecast revenue and support policy formulation (Nisab/Fitrah rates).
-            </li>
-          </ul>
-        </>
-      ),
+      description: `Lead the end-to-end product lifecycle for the Zakat and Wakaf CRM ecosystem and digital platforms.
+
+• Product & Project Management: Oversee technical integrations for omnichannel payment systems (Online, Counter, Kiosks) and manage vendor relationships for high uptime.
+• Digital Transformation: Spearhead AI chatbot initiatives and implemented e-learning SaaS platforms (Articulate 360) to modernize staff training.
+• Business Intelligence: Drive data analytics strategy using Power BI/Excel to forecast revenue and support policy formulation (Nisab/Fitrah rates).`,
     },
     {
       company: "OneSecure Asia",
@@ -95,19 +78,10 @@ export const RESUME_DATA: ResumeData = {
       title: "Marketing Manager",
       start: "2022",
       end: "2022",
-      description: (
-        <>
-          Managed go-to-market strategies for cybersecurity solutions.
-          <ul className="list-inside list-disc">
-            <li>
-              Translated technical product features into clear value propositions for business clients.
-            </li>
-            <li>
-              Executed B2B marketing initiatives to drive lead generation.
-            </li>
-          </ul>
-        </>
-      ),
+      description: `Managed go-to-market strategies for cybersecurity solutions.
+
+• Translated technical product features into clear value propositions for business clients.
+• Executed B2B marketing initiatives to drive lead generation.`,
     },
     {
       company: "Footballco",
@@ -116,19 +90,10 @@ export const RESUME_DATA: ResumeData = {
       title: "Account Executive",
       start: "2021",
       end: "2022",
-      description: (
-        <>
-          Managed post-sales execution and performance analysis for key accounts.
-          <ul className="list-inside list-disc">
-            <li>
-              **Client Operations:** Managed deliverables to meet strict timelines and quality standards.
-            </li>
-            <li>
-              **Performance Analysis:** Utilized analytics tools to track campaign metrics and generated data-driven reports for stakeholders.
-            </li>
-          </ul>
-        </>
-      ),
+      description: `Managed post-sales execution and performance analysis for key accounts.
+
+• Client Operations: Managed deliverables to meet strict timelines and quality standards.
+• Performance Analysis: Utilized analytics tools to track campaign metrics and generated data-driven reports for stakeholders.`,
     },
     {
       company: "Temasek Polytechnic",
@@ -137,19 +102,10 @@ export const RESUME_DATA: ResumeData = {
       title: "Full-time Student / Career Sabbatical",
       start: "2020",
       end: "2021",
-      description: (
-        <>
-          Undertook a planned one-year sabbatical to acquire technical competencies in Computer & Information Sciences.
-          <ul className="list-inside list-disc">
-            <li>
-              Completed Diploma in Infocomm & Digital Media to pivot career trajectory toward technical operations.
-            </li>
-            <li>
-              Focus areas: Cloud Management, Server Admin, and Digital Media tech.
-            </li>
-          </ul>
-        </>
-      ),
+      description: `Undertook a planned one-year sabbatical to acquire technical competencies in Computer & Information Sciences.
+
+• Completed Diploma in Infocomm & Digital Media to pivot career trajectory toward technical operations.
+• Focus areas: Cloud Management, Server Admin, and Digital Media tech.`,
     },
     {
       company: "Ascenda",
@@ -158,19 +114,10 @@ export const RESUME_DATA: ResumeData = {
       title: "Senior Marketing & Partnerships Executive",
       start: "2018",
       end: "2020",
-      description: (
-        <>
-          Managed strategic B2B partnerships and operational workflows for loyalty programs.
-          <ul className="list-inside list-disc">
-            <li>
-              **Stakeholder Management:** Managed partnerships with major financial institutions.
-            </li>
-            <li>
-              **Operational Workflows:** Oversaw end-to-end rewards redemption workflows and troubleshooting.
-            </li>
-          </ul>
-        </>
-      ),
+      description: `Managed strategic B2B partnerships and operational workflows for loyalty programs.
+
+• Stakeholder Management: Managed partnerships with major financial institutions.
+• Operational Workflows: Oversaw end-to-end rewards redemption workflows and troubleshooting.`,
     },
     {
       company: "Furama Hotels International",
@@ -179,11 +126,7 @@ export const RESUME_DATA: ResumeData = {
       title: "Marketing Executive",
       start: "2017",
       end: "2018",
-      description: (
-        <>
-          Executed integrated marketing campaigns and aligned strategies with revenue goals.
-        </>
-      ),
+      description: "Executed integrated marketing campaigns and aligned strategies with revenue goals.",
     },
     {
       company: "BBC Global News",
@@ -241,4 +184,4 @@ export const RESUME_DATA: ResumeData = {
       },
     },
   ],
-} as const;
+});
