@@ -30,16 +30,16 @@ export const RESUME_DATA: ResumeData = validateResumeData({
   },
   education: [
     {
-      school: "Temasek Polytechnic",
-      degree: "Specialist Diploma in Infocomm & Digital Media",
-      start: "2020",
-      end: "2021",
-    },
-    {
       school: "RMIT University",
       degree: "Bachelor of Communication (Professional Communication)",
       start: "2015",
       end: "2016",
+    },
+    {
+      school: "Temasek Polytechnic",
+      degree: "Diploma in Infocomm & Digital Media (ICT Systems, Services & Support)",
+      start: "2020",
+      end: "2021",
     },
     {
       school: "Ngee Ann Polytechnic",
@@ -47,12 +47,18 @@ export const RESUME_DATA: ResumeData = validateResumeData({
       start: "2008",
       end: "2011",
     },
+    {
+      school: "Ngee Ann Polytechnic",
+      degree: "Diploma Plus Certificate in Business",
+      start: "2009",
+      end: "2011",
+    },
   ],
   work: [
     {
       company: "Majlis Ugama Islam Singapura (MUIS)",
       link: "https://www.muis.gov.sg/",
-      badges: ["Public Sector", "Product Mgmt", "CRM"],
+      badges: ["Public Sector", "Product Management", "CRM"],
       title: "Senior Executive, Community Funds (Zakat & Outreach)",
       start: "2023",
       end: "Present",
@@ -77,11 +83,11 @@ export const RESUME_DATA: ResumeData = validateResumeData({
     {
       company: "Footballco",
       link: "https://www.footballco.com/",
-      badges: ["Media", "Account Mgmt", "Analytics"],
+      badges: ["Media", "Advertising", "Account Management", "Analytics", "Customer Success"],
       title: "Account Executive",
       start: "2021",
       end: "2022",
-      description: `Managed post-sales execution and performance analysis for key accounts.
+      description: `Managed post-sales marketing execution and analysis for regional accounts.
 
 • Client Operations: Managed deliverables to meet strict timelines and quality standards.
 • Performance Analysis: Utilised analytics tools to track campaign metrics and generated data-driven reports for stakeholders.`,
@@ -101,28 +107,28 @@ export const RESUME_DATA: ResumeData = validateResumeData({
     {
       company: "Ascenda",
       link: "https://www.ascendaloyalty.com/",
-      badges: ["FinTech", "Partnerships", "Ops"],
+      badges: ["FinTech", "Customer Success", "Partnerships", "Ops", "Tech", "Loyalty"],
       title: "Senior Marketing & Partnerships Executive",
       start: "2018",
       end: "2020",
-      description: `Managed strategic B2B partnerships and operational workflows for loyalty programs.
+      description: `Managed strategic B2B partnerships and marketing for loyalty programs.
 
 • Stakeholder Management: Managed partnerships with major financial institutions and loyalty programs.
-• Operational Workflows: Oversaw end-to-end rewards redemption workflows and troubleshooting.`,
+• Operational Workflows: Oversaw end-to-end rewards redemption user journeys and troubleshooting.`,
     },
     {
       company: "Furama Hotels International",
       link: "https://www.furama.com/",
-      badges: ["Hospitality", "Marketing"],
+      badges: ["Hospitality", "Marketing", "Digital Marketing"],
       title: "Marketing Executive",
       start: "2017",
       end: "2018",
-      description: "Executed integrated marketing campaigns and aligned strategies with revenue goals.",
+      description: "Executed regional integrated marketing campaigns and aligned strategies with revenue goals.",
     },
     {
       company: "BBC Global News",
       link: "https://www.bbc.com/",
-      badges: ["Advertising", "Media", "Data"],
+      badges: ["Advertising", "Media", "Data", "Sales"],
       title: "Pricing & Inventory Assistant",
       start: "2016",
       end: "2017",
