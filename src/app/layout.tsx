@@ -2,6 +2,7 @@ import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import { ThemeProvider } from "next-themes";
 
 import "./globals.css";
 import type React from "react";
@@ -85,7 +86,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" className={inter.className} suppressHydrationWarning>
       <head>
         {/* Google tag (gtag.js) */}
         <Script
@@ -103,7 +104,14 @@ export default function RootLayout({
         </Script>
       </head>
       <body>
-        <ErrorBoundary>{children}</ErrorBoundary>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <ErrorBoundary>{children}</ErrorBoundary>
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>

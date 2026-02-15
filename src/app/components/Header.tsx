@@ -5,6 +5,7 @@ import { Avatar } from "@/components/avatar";
 import { Button } from "@/components/ui/button";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 import { XIcon } from "@/components/icons/x-icon";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { RESUME_DATA } from "@/data/resume-data";
 import type { ResumeIcon, IconType } from "@/lib/types";
 
@@ -120,6 +121,9 @@ function ContactButtons({
           />
         </li>
       ))}
+      <li>
+        <ThemeToggle />
+      </li>
     </ul>
   );
 }
