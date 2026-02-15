@@ -116,7 +116,7 @@ function WorkExperienceItem({
           <WorkPeriod start={start} end={end} />
         </div>
 
-        <h4 className="font-mono text-sm font-semibold leading-none print:text-[12px]">
+        <h4 className="text-sm font-semibold leading-none print:text-[12px] text-foreground/90">
           {title}
         </h4>
       </CardHeader>

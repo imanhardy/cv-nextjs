@@ -7,13 +7,11 @@ export const RESUME_DATA: ResumeData = validateResumeData({
   location: "Singapore, GMT +8",
   locationLink: "https://www.google.com/maps/place/Singapore",
   about: "Tech-Enabled Operations Professional bridging Policy & Digital Solutions.",
-  summary: `Versatile professional with over 11 years of experience bridging public sector operations, stakeholder management, and digital solutions.
+  summary: `Versatile professional with over 11 years of experience bridging public sector operations, stakeholder management, and digital solutions. Successfully transitioned from a strong background in Marketing & Communications to technical operations following rigorous upskilling in Infocomm Technology.
 
-Successfully transitioned from a strong background in Marketing & Communications to technical operations following rigorous upskilling in Infocomm Technology.
+          Currently leveraging this unique hybrid skillset at MUIS to drive process improvements, system integrations, and data-backed decision-making.
 
-Currently leveraging this unique hybrid skillset at MUIS to drive process improvements, system integrations, and data-backed decision-making.
-
-Proven ability to translate complex technical requirements for business stakeholders.`,
+          Proven ability to translate complex technical requirements for business stakeholders.`,
   avatarUrl: "https://file.go.gov.sg/sulaiman-bin-suradi.jpg",
   personalWebsiteUrl: "https://sulaiman.blog",
   contact: {
@@ -29,11 +27,6 @@ Proven ability to translate complex technical requirements for business stakehol
         name: "GitHub",
         url: "https://github.com/imanhardy",
         icon: "github",
-      },
-      {
-        name: "X",
-        url: "https://x.com/",
-        icon: "x",
       },
     ],
   },
@@ -61,7 +54,7 @@ Proven ability to translate complex technical requirements for business stakehol
     {
       company: "Majlis Ugama Islam Singapura (MUIS)",
       link: "https://www.muis.gov.sg/",
-      badges: ["Public Sector", "Product Mgmt", "CRM", "AI Ops"],
+      badges: ["Public Sector", "Product Mgmt", "CRM"],
       title: "Senior Executive, Zakat & Wakaf Strategic Unit",
       start: "2023",
       end: "Present",
@@ -74,7 +67,7 @@ Proven ability to translate complex technical requirements for business stakehol
     {
       company: "OneSecure Asia",
       link: "https://www.onesecureasia.com/", 
-      badges: ["Contract", "Cybersecurity", "GTM Strategy"],
+      badges: ["Cybersecurity", "Web Design"],
       title: "Marketing Manager",
       start: "2022",
       end: "2022",
@@ -93,12 +86,12 @@ Proven ability to translate complex technical requirements for business stakehol
       description: `Managed post-sales execution and performance analysis for key accounts.
 
 • Client Operations: Managed deliverables to meet strict timelines and quality standards.
-• Performance Analysis: Utilized analytics tools to track campaign metrics and generated data-driven reports for stakeholders.`,
+• Performance Analysis: Utilised analytics tools to track campaign metrics and generated data-driven reports for stakeholders.`,
     },
     {
       company: "Temasek Polytechnic",
       link: "https://www.tp.edu.sg/",
-      badges: ["Sabbatical", "Upskilling", "Infocomm"],
+      badges: ["Sabbatical", "Upskilling", "IT"],
       title: "Full-time Student / Career Sabbatical",
       start: "2020",
       end: "2021",
@@ -122,7 +115,7 @@ Proven ability to translate complex technical requirements for business stakehol
     {
       company: "Furama Hotels International",
       link: "https://www.furama.com/",
-      badges: ["Hospitality", "Campaign Ops"],
+      badges: ["Hospitality", "Marketing"],
       title: "Marketing Executive",
       start: "2017",
       end: "2018",
@@ -131,7 +124,7 @@ Proven ability to translate complex technical requirements for business stakehol
     {
       company: "BBC Global News",
       link: "https://www.bbc.com/",
-      badges: ["Media", "Data Integrity", "Inventory"],
+      badges: ["Advertising", "Media", "Data"],
       title: "Pricing & Inventory Assistant",
       start: "2016",
       end: "2017",
@@ -167,7 +160,7 @@ Proven ability to translate complex technical requirements for business stakehol
       title: "Digital Transformation & AI",
       techStack: ["AI Chatbots", "Articulate 360", "SaaS", "Automation"],
       description:
-        "Spearheading the digitalization of internal processes, including the deployment of AI chatbots for query handling and modern e-learning platforms for officer training.",
+        "Spearheading the digitalisation of internal processes, including the deployment of AI chatbots for query handling and modern e-learning platforms for officer training.",
       link: {
         label: "MUIS",
         href: "https://www.muis.gov.sg/",
@@ -179,7 +172,7 @@ Proven ability to translate complex technical requirements for business stakehol
       description:
         "Formulating critical policy papers (Nisab calculations, Fitrah rates) backed by rigorous data analysis and business intelligence reporting.",
       link: {
-        label: "Fatwa/Fiqh",
+        label: "Fatwa",
         href: "https://www.muis.gov.sg/officeofthemufti",
       },
     },

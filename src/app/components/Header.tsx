@@ -82,7 +82,7 @@ function ContactButtons({
 }: ContactButtonsProps) {
   return (
     <ul
-      className="flex list-none gap-x-1 pt-1 font-mono text-sm text-foreground/80 print:hidden"
+      className="flex list-none gap-x-1 pt-1 text-sm text-foreground/80 print:hidden"
       aria-label="Contact links"
     >
       {personalWebsiteUrl && (
@@ -138,7 +138,7 @@ function PrintContact({
   personalWebsiteUrl,
 }: PrintContactProps) {
   return (
-    <div className="hidden gap-x-2 font-mono text-sm text-foreground/80 print:flex print:text-[12px]">
+    <div className="hidden gap-x-2 text-sm text-foreground/80 print:flex print:text-[12px]">
       {personalWebsiteUrl && (
         <>
           <a
