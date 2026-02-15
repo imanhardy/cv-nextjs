@@ -2,15 +2,17 @@ import type { StaticImageData } from "next/image";
 
 export type ResumeIcon = React.ComponentType<React.SVGProps<SVGSVGElement>> | StaticImageData;
 
+// Define IconType locally to avoid circular dependency
 export type IconType = "github" | "linkedin" | "x" | "globe" | "mail" | "phone";
 
+// Updated ResumeData interface (now uses strings instead of React.ReactNode)
 export interface ResumeData {
   name: string;
   initials: string;
   location: string;
   locationLink: string;
   about: string;
-  summary: string | React.ReactNode;
+  summary: string; // Changed from string | React.ReactNode to just string
   avatarUrl: string;
   personalWebsiteUrl: string;
   contact: {
@@ -35,7 +37,7 @@ export interface ResumeData {
     title: string;
     start: string;
     end: string | null;
-    description: string | React.ReactNode;
+    description: string; // Changed from string | React.ReactNode to just string
   }>;
   skills: string[];
   projects: Array<{
