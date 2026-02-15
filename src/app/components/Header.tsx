@@ -183,7 +183,7 @@ export function Header() {
         <h1 className="text-2xl font-bold" id="resume-name">
           {RESUME_DATA.name}
         </h1>
-        <p className="max-w-md text-pretty font-mono text-sm text-foreground/80 print:text-[12px]">
+        <p className="max-w-md text-pretty text-sm text-foreground/80 print:text-[12px] leading-relaxed">
           {RESUME_DATA.about}
         </p>
 

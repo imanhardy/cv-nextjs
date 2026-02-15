@@ -122,7 +122,7 @@ function WorkExperienceItem({
       </CardHeader>
 
       <CardContent>
-        <div className="mt-2 text-xs text-foreground/80 print:mt-1 print:text-[10px] text-pretty">
+        <div className="mt-2 text-xs text-foreground/80 print:mt-1 print:text-[10px] text-pretty whitespace-pre-line leading-relaxed">
           {description}
         </div>
         <div className="mt-2">
