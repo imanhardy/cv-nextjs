@@ -39,7 +39,7 @@ function ProjectLink({
       >
         {title}
         <span
-          className="size-1 rounded-full bg-green-500"
+          className="size-1 rounded-full bg-green-500 dark:bg-green-400"
           title="Active project indicator"
           aria-hidden="true"
         />
