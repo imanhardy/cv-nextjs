@@ -6,7 +6,7 @@ export const RESUME_DATA: ResumeData = validateResumeData({
   initials: "SBS",
   location: "Singapore, GMT +8",
   locationLink: "https://www.google.com/maps/place/Singapore",
-  about: "Tech-Enabled Operations Professional bridging Policy & Digital Solutions.",
+  about: "Tech-Enabled Marketing Professional bridging Policy & Digital Solutions.",
   summary: `Versatile professional with over 11 years of experience bridging public sector operations, stakeholder management, and digital solutions. Successfully transitioned from a strong background in Marketing & Communications to technical operations following rigorous upskilling in Infocomm Technology.
 
           Currently leveraging this unique hybrid skillset at MUIS to drive process improvements, system integrations, and data-backed decision-making. Proven ability to translate complex technical requirements for business stakeholders.`,
