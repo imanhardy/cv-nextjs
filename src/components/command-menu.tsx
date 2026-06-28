@@ -1,8 +1,20 @@
 "use client";
 
-import { CommandIcon, Moon, Sun, FileText, Briefcase, GraduationCap, Code, FolderOpen, Printer, ExternalLink } from "lucide-react";
-import * as React from "react";
 import Fuse from "fuse.js";
+import {
+  Briefcase,
+  Code,
+  CommandIcon,
+  ExternalLink,
+  FileText,
+  FolderOpen,
+  GraduationCap,
+  Moon,
+  Printer,
+  Sun,
+} from "lucide-react";
+import { useTheme } from "next-themes";
+import * as React from "react";
 import {
   CommandDialog,
   CommandEmpty,
@@ -13,7 +25,6 @@ import {
   CommandSeparator,
 } from "@/components/ui/command";
 import { Button } from "./ui/button";
-import { useTheme } from "next-themes";
 
 interface Props {
   links: { url: string; title: string }[];
@@ -59,99 +70,131 @@ export const CommandMenu = ({ links }: Props) => {
   }, [theme, setTheme]);
 
   // Define all command items
-  const commandItems: CommandItemType[] = [
-    // Actions
-    {
-      id: "print",
-      title: "Print Resume",
-      icon: <Printer className="mr-2 size-4" />,
-      keywords: ["print", "pdf", "export", "save"],
-      onSelect: () => {
-        setOpen(false);
-        window.print();
+  const commandItems: CommandItemType[] = React.useMemo(
+    () => [
+      // Actions
+      {
+        id: "print",
+        title: "Print Resume",
+        icon: <Printer className="mr-2 size-4" />,
+        keywords: ["print", "pdf", "export", "save"],
+        onSelect: () => {
+          setOpen(false);
+          window.print();
+        },
+        group: "Actions",
       },
-      group: "Actions",
-    },
-    {
-      id: "toggle-theme",
-      title: `Toggle ${theme === "dark" ? "Light" : "Dark"} Mode`,
-      icon: theme === "dark" ? <Sun className="mr-2 size-4" /> : <Moon className="mr-2 size-4" />,
-      keywords: ["theme", "dark", "light", "mode", "toggle", "appearance"],
-      onSelect: () => {
-        setOpen(false);
-        setTheme(theme === "dark" ? "light" : "dark");
+      {
+        id: "toggle-theme",
+        title: `Toggle ${theme === "dark" ? "Light" : "Dark"} Mode`,
+        icon:
+          theme === "dark" ? (
+            <Sun className="mr-2 size-4" />
+          ) : (
+            <Moon className="mr-2 size-4" />
+          ),
+        keywords: ["theme", "dark", "light", "mode", "toggle", "appearance"],
+        onSelect: () => {
+          setOpen(false);
+          setTheme(theme === "dark" ? "light" : "dark");
+        },
+        group: "Actions",
       },
-      group: "Actions",
-    },
-    // Navigation
-    {
-      id: "nav-summary",
-      title: "Jump to Summary",
-      icon: <FileText className="mr-2 size-4" />,
-      keywords: ["summary", "about", "jump", "navigate", "section"],
-      onSelect: () => {
-        setOpen(false);
-        document.getElementById("about-section")?.scrollIntoView({ behavior: "smooth" });
+      // Navigation
+      {
+        id: "nav-summary",
+        title: "Jump to Summary",
+        icon: <FileText className="mr-2 size-4" />,
+        keywords: ["summary", "about", "jump", "navigate", "section"],
+        onSelect: () => {
+          setOpen(false);
+          document
+            .getElementById("about-section")
+            ?.scrollIntoView({ behavior: "smooth" });
+        },
+        group: "Navigation",
       },
-      group: "Navigation",
-    },
-    {
-      id: "nav-work",
-      title: "Jump to Work Experience",
-      icon: <Briefcase className="mr-2 size-4" />,
-      keywords: ["work", "experience", "jobs", "career", "employment", "jump", "navigate"],
-      onSelect: () => {
-        setOpen(false);
-        document.getElementById("work-experience")?.scrollIntoView({ behavior: "smooth" });
+      {
+        id: "nav-work",
+        title: "Jump to Work Experience",
+        icon: <Briefcase className="mr-2 size-4" />,
+        keywords: [
+          "work",
+          "experience",
+          "jobs",
+          "career",
+          "employment",
+          "jump",
+          "navigate",
+        ],
+        onSelect: () => {
+          setOpen(false);
+          document
+            .getElementById("work-experience")
+            ?.scrollIntoView({ behavior: "smooth" });
+        },
+        group: "Navigation",
       },
-      group: "Navigation",
-    },
-    {
-      id: "nav-education",
-      title: "Jump to Education",
-      icon: <GraduationCap className="mr-2 size-4" />,
-      keywords: ["education", "school", "degree", "jump", "navigate"],
-      onSelect: () => {
-        setOpen(false);
-        document.getElementById("education-section")?.scrollIntoView({ behavior: "smooth" });
+      {
+        id: "nav-education",
+        title: "Jump to Education",
+        icon: <GraduationCap className="mr-2 size-4" />,
+        keywords: ["education", "school", "degree", "jump", "navigate"],
+        onSelect: () => {
+          setOpen(false);
+          document
+            .getElementById("education-section")
+            ?.scrollIntoView({ behavior: "smooth" });
+        },
+        group: "Navigation",
       },
-      group: "Navigation",
-    },
-    {
-      id: "nav-skills",
-      title: "Jump to Skills",
-      icon: <Code className="mr-2 size-4" />,
-      keywords: ["skills", "technologies", "abilities", "jump", "navigate"],
-      onSelect: () => {
-        setOpen(false);
-        document.getElementById("skills-section")?.scrollIntoView({ behavior: "smooth" });
+      {
+        id: "nav-skills",
+        title: "Jump to Skills",
+        icon: <Code className="mr-2 size-4" />,
+        keywords: ["skills", "technologies", "abilities", "jump", "navigate"],
+        onSelect: () => {
+          setOpen(false);
+          document
+            .getElementById("skills-section")
+            ?.scrollIntoView({ behavior: "smooth" });
+        },
+        group: "Navigation",
       },
-      group: "Navigation",
-    },
-    {
-      id: "nav-projects",
-      title: "Jump to Projects",
-      icon: <FolderOpen className="mr-2 size-4" />,
-      keywords: ["projects", "portfolio", "work", "jump", "navigate", "side"],
-      onSelect: () => {
-        setOpen(false);
-        document.getElementById("side-projects")?.scrollIntoView({ behavior: "smooth" });
+      {
+        id: "nav-projects",
+        title: "Jump to Projects",
+        icon: <FolderOpen className="mr-2 size-4" />,
+        keywords: ["projects", "portfolio", "work", "jump", "navigate", "side"],
+        onSelect: () => {
+          setOpen(false);
+          document
+            .getElementById("side-projects")
+            ?.scrollIntoView({ behavior: "smooth" });
+        },
+        group: "Navigation",
       },
-      group: "Navigation",
-    },
-    // Links
-    ...links.map((link) => ({
-      id: `link-${link.url}`,
-      title: `Open ${link.title}`,
-      icon: <ExternalLink className="mr-2 size-4" />,
-      keywords: [link.title.toLowerCase(), "open", "link", "external", "website"],
-      onSelect: () => {
-        setOpen(false);
-        window.open(link.url, "_blank");
-      },
-      group: "Links",
-    })),
-  ];
+      // Links
+      ...links.map((link) => ({
+        id: `link-${link.url}`,
+        title: `Open ${link.title}`,
+        icon: <ExternalLink className="mr-2 size-4" />,
+        keywords: [
+          link.title.toLowerCase(),
+          "open",
+          "link",
+          "external",
+          "website",
+        ],
+        onSelect: () => {
+          setOpen(false);
+          window.open(link.url, "_blank");
+        },
+        group: "Links",
+      })),
+    ],
+    [theme, links, setTheme]
+  );
 
   // Setup fuzzy search
   const fuse = React.useMemo(() => {
@@ -207,8 +250,8 @@ export const CommandMenu = ({ links }: Props) => {
         <CommandIcon className="my-6 size-6" />
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen}>
-        <CommandInput 
-          placeholder="Type a command or search..." 
+        <CommandInput
+          placeholder="Type a command or search..."
           value={search}
           onValueChange={setSearch}
         />

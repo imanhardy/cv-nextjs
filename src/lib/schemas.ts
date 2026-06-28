@@ -2,7 +2,14 @@ import { z } from "zod";
 import type { IconType } from "./types";
 
 // Icon type schema - matches IconType from types.ts
-export const IconTypeSchema = z.enum(["github", "linkedin", "x", "globe", "mail", "phone"]) as z.ZodType<IconType>;
+export const IconTypeSchema = z.enum([
+  "github",
+  "linkedin",
+  "x",
+  "globe",
+  "mail",
+  "phone",
+]) as z.ZodType<IconType>;
 
 // Social media link schema
 export const SocialSchema = z.object({
@@ -34,14 +41,16 @@ export const WorkSchema = z.object({
   title: z.string(),
   start: z.string(),
   end: z.string().nullable(),
-  description: z.string(), // Changed from React.ReactNode to string
+  description: z.string(),
 });
 
 // Project link schema
-export const ProjectLinkSchema = z.object({
-  label: z.string(),
-  href: z.string().url(),
-}).optional();
+export const ProjectLinkSchema = z
+  .object({
+    label: z.string(),
+    href: z.string().url(),
+  })
+  .optional();
 
 // Project item schema
 export const ProjectSchema = z.object({
@@ -58,8 +67,8 @@ export const ResumeDataSchema = z.object({
   location: z.string(),
   locationLink: z.string().url(),
   about: z.string(),
-  summary: z.string(), // Changed from React.ReactNode to string
-  avatarUrl: z.string().url(),
+  summary: z.string(),
+  avatarUrl: z.string().min(1),
   personalWebsiteUrl: z.string().url(),
   contact: ContactSchema,
   education: z.array(EducationSchema),

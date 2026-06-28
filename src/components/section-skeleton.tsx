@@ -1,4 +1,3 @@
-import React from "react";
 import { cn } from "@/lib/utils";
 
 interface SectionSkeletonProps {
@@ -11,7 +10,7 @@ export function SectionSkeleton({
   lines = 3,
 }: SectionSkeletonProps) {
   return (
-    <output className={cn("space-y-4", className)} aria-label="Loading section">
+    <output className={cn("space-y-4", className)}>
       <div className="h-6 w-32 bg-gray-200 rounded animate-pulse" />
       <div className="space-y-2">
         {[...Array(lines)].map((_, i) => (

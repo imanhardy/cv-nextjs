@@ -1,55 +1,14 @@
 import type { StaticImageData } from "next/image";
+import type { ResumeData } from "./schemas";
 
-export type ResumeIcon = React.ComponentType<React.SVGProps<SVGSVGElement>> | StaticImageData;
+export type ResumeIcon =
+  | React.ComponentType<React.SVGProps<SVGSVGElement>>
+  | StaticImageData;
 
-// Define IconType locally to avoid circular dependency
 export type IconType = "github" | "linkedin" | "x" | "globe" | "mail" | "phone";
 
-// Updated ResumeData interface (now uses strings instead of React.ReactNode)
-export interface ResumeData {
-  name: string;
-  initials: string;
-  location: string;
-  locationLink: string;
-  about: string;
-  summary: string; // Changed from string | React.ReactNode to just string
-  avatarUrl: string;
-  personalWebsiteUrl: string;
-  contact: {
-    email: string;
-    tel: string;
-    social: Array<{
-      name: string;
-      url: string;
-      icon: IconType;
-    }>;
-  };
-  education: Array<{
-    school: string;
-    degree: string;
-    start: string;
-    end: string;
-  }>;
-  work: Array<{
-    company: string;
-    link: string;
-    badges: string[];
-    title: string;
-    start: string;
-    end: string | null;
-    description: string; // Changed from string | React.ReactNode to just string
-  }>;
-  skills: string[];
-  projects: Array<{
-    title: string;
-    techStack: string[];
-    description: string;
-    link?: {
-      label: string;
-      href: string;
-    };
-  }>;
-}
+// Re-export ResumeData from schemas (single source of truth via Zod)
+export type { ResumeData };
 
 // GraphQL compatible types (without React components)
 export interface GraphQLSocial {
@@ -108,19 +67,6 @@ export interface GraphQLMe {
   projects: GraphQLProject[];
 }
 
-// Helper function to convert React content to string
-export function reactToString(content: React.ReactNode): string {
-  if (typeof content === "string") return content;
-  if (Array.isArray(content)) {
-    return content.map(reactToString).join("");
-  }
-  if (typeof content === "object" && content && "props" in content) {
-    const { children } = content.props;
-    if (children) return reactToString(children);
-  }
-  return "";
-}
-
 // Transform function to convert ResumeData to GraphQL compatible format
 export function resumeDataToGraphQL(data: ResumeData): GraphQLMe {
   return {
@@ -129,7 +75,7 @@ export function resumeDataToGraphQL(data: ResumeData): GraphQLMe {
     location: data.location,
     locationLink: data.locationLink,
     about: data.about,
-    summary: reactToString(data.summary),
+    summary: data.summary,
     avatarUrl: data.avatarUrl,
     personalWebsiteUrl: data.personalWebsiteUrl,
     contact: {
@@ -144,8 +90,8 @@ export function resumeDataToGraphQL(data: ResumeData): GraphQLMe {
       badges: job.badges,
       title: job.title,
       start: job.start,
-      end: job.end || "Present",
-      description: reactToString(job.description),
+      end: job.end ?? "Present",
+      description: job.description,
     })),
     skills: data.skills,
     projects: data.projects.map((project) => ({

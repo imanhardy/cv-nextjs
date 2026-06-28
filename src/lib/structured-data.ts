@@ -20,7 +20,7 @@ export function generatePersonStructuredData() {
       telephone: RESUME_DATA.contact.tel,
       contactType: "personal",
     },
-    jobTitle: "Full Stack Engineer",
+    jobTitle: RESUME_DATA.work[0]?.title ?? RESUME_DATA.about,
     worksFor:
       RESUME_DATA.work.length > 0
         ? {
@@ -39,11 +39,6 @@ export function generatePersonStructuredData() {
       occupationLocation: {
         "@type": "Place",
         name: RESUME_DATA.location,
-      },
-      occupationalCategory: "Software Engineering",
-      estimatedSalary: {
-        "@type": "MonetaryAmountDistribution",
-        name: "Professional software engineer",
       },
     })),
     knowsAbout: RESUME_DATA.skills,
@@ -72,13 +67,14 @@ export function generateWebPageStructuredData() {
 }
 
 export function generateResumeStructuredData() {
+  const person = generatePersonStructuredData();
   return {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
-    dateCreated: new Date().toISOString(),
-    dateModified: new Date().toISOString(),
-    mainEntity: generatePersonStructuredData(),
-    about: generatePersonStructuredData(),
+    dateCreated: "2024-01-01T00:00:00.000Z",
+    dateModified: "2025-06-28T00:00:00.000Z",
+    mainEntity: person,
+    about: person,
     name: `${RESUME_DATA.name} - Professional Resume`,
     description: `Professional resume and portfolio of ${RESUME_DATA.name}, ${RESUME_DATA.about}`,
     url: RESUME_DATA.personalWebsiteUrl,
