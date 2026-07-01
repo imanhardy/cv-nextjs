@@ -6,11 +6,11 @@ export const RESUME_DATA: ResumeData = validateResumeData({
   initials: "SBS",
   location: "Singapore, GMT +8",
   locationLink: "https://www.google.com/maps/place/Singapore",
-  about: "Tech-Enabled Marketing Professional bridging Policy & Digital Solutions.",
-  summary: `Versatile professional with over 11 years of experience bridging public sector operations, stakeholder management, and digital solutions. Successfully transitioned from a strong background in Marketing & Communications to technical operations following rigorous upskilling in Infocomm Technology.
-
-          Currently leveraging this unique hybrid skillset at MUIS to drive process improvements, system integrations, and data-backed decision-making. Proven ability to translate complex technical requirements for business stakeholders.`,
-  avatarUrl: "https://file.go.gov.sg/sulaiman-bin-suradi.jpg",
+  about:
+    "Tech-Enabled Marketing Professional bridging Policy & Digital Solutions.",
+  summary:
+    "Versatile professional with over 11 years of experience bridging public sector operations, stakeholder management, and digital solutions. Successfully transitioned from a strong background in Marketing & Communications to technical operations following rigorous upskilling in Infocomm Technology.\n\nCurrently leveraging this unique hybrid skillset at MUIS to drive process improvements, system integrations, and data-backed decision-making. Proven ability to translate complex technical requirements for business stakeholders.",
+  avatarUrl: "/sulaiman-suradi-profile.jpg",
   personalWebsiteUrl: "https://sulaiman.blog",
   contact: {
     email: "sulaimanbins@gmail.com",
@@ -37,7 +37,8 @@ export const RESUME_DATA: ResumeData = validateResumeData({
     },
     {
       school: "Temasek Polytechnic",
-      degree: "Diploma in Infocomm & Digital Media (ICT Systems, Services & Support)",
+      degree:
+        "Diploma in Infocomm & Digital Media (ICT Systems, Services & Support)",
       start: "2020",
       end: "2021",
     },
@@ -70,7 +71,7 @@ export const RESUME_DATA: ResumeData = validateResumeData({
     },
     {
       company: "OneSecure Asia",
-      link: "https://www.onesecureasia.com/", 
+      link: "https://www.onesecureasia.com/",
       badges: ["Cybersecurity", "Marketing", "Web Design"],
       title: "Marketing Manager",
       start: "2022",
@@ -83,7 +84,13 @@ export const RESUME_DATA: ResumeData = validateResumeData({
     {
       company: "Footballco",
       link: "https://www.footballco.com/",
-      badges: ["Media", "Advertising", "Account Management", "Analytics", "Customer Success"],
+      badges: [
+        "Media",
+        "Advertising",
+        "Account Management",
+        "Analytics",
+        "Customer Success",
+      ],
       title: "Account Executive",
       start: "2021",
       end: "2022",
@@ -107,7 +114,14 @@ export const RESUME_DATA: ResumeData = validateResumeData({
     {
       company: "Ascenda",
       link: "https://www.ascendaloyalty.com/",
-      badges: ["FinTech", "Customer Success", "Partnerships", "Ops", "Tech", "Loyalty"],
+      badges: [
+        "FinTech",
+        "Customer Success",
+        "Partnerships",
+        "Ops",
+        "Tech",
+        "Loyalty",
+      ],
       title: "Senior Marketing & Partnerships Executive",
       start: "2018",
       end: "2020",
@@ -123,7 +137,8 @@ export const RESUME_DATA: ResumeData = validateResumeData({
       title: "Marketing Executive",
       start: "2017",
       end: "2018",
-      description: "Executed regional integrated marketing campaigns and aligned strategies with revenue goals.",
+      description:
+        "Executed regional integrated marketing campaigns and aligned strategies with revenue goals.",
     },
     {
       company: "BBC Global News",
@@ -163,7 +178,12 @@ export const RESUME_DATA: ResumeData = validateResumeData({
     },
     {
       title: "Islamic Legacy Planning",
-      techStack: ["CMS", "Content Development", "Legacy Planning", "Public Outreach"],
+      techStack: [
+        "CMS",
+        "Content Development",
+        "Legacy Planning",
+        "Public Outreach",
+      ],
       description:
         "Created content on legacy planning for public outreach efforts including writing content for MUIS website",
       link: {

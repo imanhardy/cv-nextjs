@@ -21,7 +21,7 @@ export function ThemeToggle() {
         size="icon"
         className="size-8"
         aria-label="Toggle theme"
-        disabled
+        disabled={true}
       >
         <Sun className="size-4" />
       </Button>

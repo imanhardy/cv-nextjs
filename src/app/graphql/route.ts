@@ -1,36 +1,36 @@
 import "reflect-metadata";
 
 import { ApolloServer } from "@apollo/server";
+import { ApolloServerPluginLandingPageDisabled } from "@apollo/server/plugin/disabled";
 import { ApolloServerPluginLandingPageLocalDefault } from "@apollo/server/plugin/landingPage/default";
 import { startServerAndCreateNextHandler } from "@as-integrations/next";
 import { type NextRequest, NextResponse } from "next/server";
 import { buildSchema } from "type-graphql";
 import { MeResolver } from "../../apollo/resolvers";
 
-let apolloServer: ApolloServer;
-let handler: any;
+const isDev = process.env.NODE_ENV !== "production";
+
+let handler: (req: NextRequest) => Promise<Response>;
 
 try {
   const schema = await buildSchema({
     resolvers: [MeResolver],
   });
 
-  apolloServer = new ApolloServer({
+  const apolloServer = new ApolloServer({
     schema,
-    plugins: [ApolloServerPluginLandingPageLocalDefault()],
-    introspection: process.env.NODE_ENV !== "production",
+    plugins: [
+      isDev
+        ? ApolloServerPluginLandingPageLocalDefault()
+        : ApolloServerPluginLandingPageDisabled(),
+    ],
+    introspection: isDev,
     formatError: (err) => {
-      // Log error for debugging in development
-      if (process.env.NODE_ENV !== "production") {
+      if (isDev) {
         console.error("GraphQL Error:", err);
       }
-
-      // Return sanitized error for production
       return {
-        message:
-          process.env.NODE_ENV === "production"
-            ? "Internal server error"
-            : err.message,
+        message: isDev ? err.message : "Internal server error",
         code: err.extensions?.code,
         path: err.path,
       };
